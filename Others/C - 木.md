@@ -1,6 +1,6 @@
 # C - 木
-[[Tree]] [[Graph]] [[Light Blue]]
-#Tree #Graph #Light_Blue
+[[Tree]] [[Graph]] [[Light Blue]] [[Others]]
+#Tree #Graph #Light_Blue #Others
 
 ## 問題
 - https://atcoder.jp/contests/indeednow-qualb/tasks/indeednow_2015_qualc_3

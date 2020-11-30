@@ -1,6 +1,6 @@
 # B - 天下一後入れ先出しデータ構造
-#stack #Light_Gray
-[[Stack]] [[Light Blue]]
+[[Stack]] [[Light Blue]] [[Others]]
+#stack #Light_Gray #Others
 
 ## 問題
 - [B - 天下一後入れ先出しデータ構造](https://atcoder.jp/contests/tenka1-2013-qualb/tasks/tenka1_2013_qualB_b)
