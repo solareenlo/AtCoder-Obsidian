@@ -1,6 +1,6 @@
 # B - エターナルスタティックファイナル
-[[DP]] [[Light Blue]] [[Others]]
-#DP #Light_Blue  #Others
+[[文字列操作]] [[DP]] [[Light Blue]] [[Others]]
+#文字列操作 #DP #Light_Blue  #Others
 
 ## 問題
 - https://atcoder.jp/contests/tenka1-2014-qualb/tasks/tenka1_2014_qualB_b
