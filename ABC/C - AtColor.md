@@ -6,8 +6,9 @@
 - [C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3)
 
 ## 解き方
-テトリス累積和を用いる．
+- テトリス累積和を用いる．
 
+## Code
 ```c
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)

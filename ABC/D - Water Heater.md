@@ -2,6 +2,7 @@
 #累積和 #いもす法 #Light_Gray #ABC
 [[累積和]] [[いもす法]] [[Light Gray]] [[ABC]]
 
+
 ## 問題
 - [D - Water Heater](https://atcoder.jp/contests/abc183/tasks/abc183_d)
 

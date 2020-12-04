@@ -5,7 +5,6 @@
 ## 問題
 - [C - Super Ryuma](https://atcoder.jp/contests/abc184/tasks/abc184_c)
 
-
 ## 解き方
 マス $(a,\ b)$ からマス $(c,\ d)$ に移動できる 3 つの条件
 - $a + b = c + d$
@@ -36,6 +35,7 @@
 	
 ![[abc184_c_2.png]]
 
+## Code
 ```c++
 #include <bits/stdc++.h>
 using namespace std;

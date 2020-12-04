@@ -18,7 +18,7 @@
 - 左端が右端を追い越さないように注意して実装すること．
 - 実装は開区間で持つのが良いと思われる．
 
-## code
+## Code
 ```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
