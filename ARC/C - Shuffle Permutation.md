@@ -1,6 +1,6 @@
 # C - Shuffle Permutation
-#dsu #Light_Blue #ARC
-[[dsu]] [[Light Blue]] [[ARC]]
+[[swap]] [[dsu]] [[Light Blue]] [[ARC]]
+#swap #dsu #Light_Blue #ARC
 
 ## 問題
 - [C - Shuffle Permutation](https://atcoder.jp/contests/arc107/tasks/arc107_c)

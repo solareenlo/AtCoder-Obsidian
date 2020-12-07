@@ -1,6 +1,6 @@
 # B - Flip Digits
-#累積xor #Green #AGC
 [[累積xor]] [[Green]] [[AGC]]
+#累積xor #Green #AGC
 
 ## 問題
 - [B - Flip Digits](https://atcoder.jp/contests/agc049/tasks/agc049_b)

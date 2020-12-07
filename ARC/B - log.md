@@ -1,5 +1,6 @@
 # B - log
 [[二分探索]] [[Brown]] [[ARC]]
+#二分探索 #Brown #ARC 
 
 ## 問題
 - https://atcoder.jp/contests/arc109/tasks/arc109_b

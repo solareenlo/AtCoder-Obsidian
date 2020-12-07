@@ -1,6 +1,6 @@
 # A - Sum and Product
-#Number_theory #Gray #ARC
 [[Number theory]] [[Gray]] [[ARC]]
+#Number_theory #Gray #ARC
 
 ## 問題
 - [A - Sum and Product](https://atcoder.jp/contests/arc108/tasks/arc108_a)
