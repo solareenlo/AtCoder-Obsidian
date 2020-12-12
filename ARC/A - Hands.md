@@ -1,6 +1,6 @@
 # A - Hands
-[[パターン]] [[Light Gray]] [[ARC]]
-#パターン #Light_Gray #ARC 
+[[パターン]] [[Gray]] [[ARC]]
+#パターン #Gray #ARC
 
 ## 問題
 - https://atcoder.jp/contests/arc109/tasks/arc109_a

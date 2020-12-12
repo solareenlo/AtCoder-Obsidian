@@ -1,6 +1,6 @@
 # D - Water Heater
-#累積和 #いもす法 #Light_Gray #ABC
-[[累積和]] [[いもす法]] [[Light Gray]] [[ABC]]
+#累積和 #いもす法 #Brown #ABC
+[[累積和]] [[いもす法]] [[Brown]] [[ABC]]
 
 
 ## 問題
