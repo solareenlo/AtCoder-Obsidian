@@ -1,16 +1,21 @@
 # D - Water Heater
-#累積和 #いもす法 #Brown #ABC
-[[累積和]] [[いもす法]] [[Brown]] [[ABC]]
-
+[[いもす法]] [[累積和]] [[Brown]] [[ABC]]
+#いもす法 #累積和 #Brown #ABC 
 
 ## 問題
-- [D - Water Heater](https://atcoder.jp/contests/abc183/tasks/abc183_d)
+- https://atcoder.jp/contests/abc183/tasks/abc183_d
 
 ## 解き方
-- [いもす法](https://imoz.jp/algorithms/imos_method.html)の累積和を用いる．
+- いもす法 により $O ( N + T )$ で解くことができる．
+- $0$ で初期化された配列 $a$ を用意する．
+- 各 $i$ に対し，
+	- $a [ S_i ] ← a [ S_i ] + P_i$
+	- $a [ T_i ] ← a [ T_i ] − P_i$
+- としたのち，配列 $a$ の累積和を取ると，時刻 $X$ に使われるお湯の量が $a [ X ]$ になる．
+- この配列の最大値が $W$ 以下であるかどうかを調べればよい．
 
-## Code
-```c
+### Code
+```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
@@ -33,5 +38,4 @@ int main() {
 	cout << ((w >= *max_element(s, s+MAXI)) ? "Yes" : "No") << '\n';
     return 0;
 }
-
 ```
