@@ -1,6 +1,6 @@
 # D - Stamp
-[[ソート]] [[Brown]] [[ABC]]
-#ソート #Brown #ABC 
+[[sort]] [[Brown]] [[ABC]]
+#sort #Brown #ABC 
 
 ## 問題
 - https://atcoder.jp/contests/abc185/tasks/abc185_d
