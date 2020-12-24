@@ -1,6 +1,6 @@
 # D - increment of coins
-[[確率DP]] [[メモ化再起]] [[Light Blue]] [[ABC]]
-#確率DP #メモ化再起 #Light_Blue #ABC 
+[[DP]] [[確率DP]] [[メモ化再起]] [[Light Blue]] [[ABC]]
+#DP #確率DP #メモ化再起 #Light_Blue #ABC 
 
 ## 問題
 - https://atcoder.jp/contests/abc184/tasks/abc184_d

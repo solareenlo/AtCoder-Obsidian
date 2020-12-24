@@ -1,6 +1,6 @@
 # E - Traveling Salesman among Aerial Cities
-[[bitDP]] [[巡回セールスマン問題]] [[Light Blue]] [[ABC]]
-#bitDP #巡回セールスマン問題 #Light_Blue #ABC 
+[[DP]] [[bitDP]] [[巡回セールスマン問題]] [[Light Blue]] [[ABC]]
+#DP #bitDP #巡回セールスマン問題 #Light_Blue #ABC 
 
 ## 問題
 - https://atcoder.jp/contests/abc180/tasks/abc180_e

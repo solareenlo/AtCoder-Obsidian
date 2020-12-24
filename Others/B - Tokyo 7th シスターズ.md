@@ -1,6 +1,6 @@
 # B - Tokyo 7th シスターズ
-[[bit全探索]] [[popcount]] [[Light Blue]] [[Others]]
-#bit全探索 #popcount #Light_Blue #Others 
+[[全探索]] [[bit全探索]] [[popcount]] [[Light Blue]] [[Others]]
+#全探索 #bit全探索 #popcount #Light_Blue #Others 
 
 ## 問題
 - https://atcoder.jp/contests/donuts-2015/tasks/donuts_2015_2
