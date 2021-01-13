@@ -1,6 +1,6 @@
 # A - Simple Math 2
-[[MOD]] [[数学的考察]] [[Green]] [[ARC]]
-#MOD #数学的考察 #Green #ARC 
+[[MOD]] [[数学的考察]] [[ACL]] [[Green]] [[ARC]]
+#MOD #数学的考察 #ACL #Green #ARC 
 
 ## 問題
 - https://atcoder.jp/contests/arc111/tasks/arc111_a
