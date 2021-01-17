@@ -1,6 +1,6 @@
 # B - Mex Boxes
-[[連蔵する数字]] [[Gray]] [[Others]]
-#連続する数字 #Gray #Others 
+[[連続する数字]] [[パターン]] [[Gray]] [[Others]]
+#連続する数字 #パターン #Gray #Others 
 
 ## 問題
 - https://atcoder.jp/contests/keyence2021/tasks/keyence2021_b
