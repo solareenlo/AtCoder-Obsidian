@@ -1,6 +1,6 @@
 # C - MAD TEAM
-[[二分探索]] [[DP]] [[Light Blue]] [[Others]]
-#二分探索 #DP #Light_Blue #Others 
+[[二分探索]] [[DP]] [[Light Blue]] [[Others_Rated]]
+#二分探索 #DP #Light_Blue #Others_Rated  
 
 ## 問題
 - https://atcoder.jp/contests/zone2021/tasks/zone2021_c
