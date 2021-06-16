@@ -1,5 +1,5 @@
 # D - Digits Parade
-[[数学的考察考察]] [[DP]] [[Light Blue]] [[ABC]]
+[[数学的考察] [[DP]] [[Light Blue]] [[ABC]]
 #数学的考察 #DP #Light_Blue #ABC 
 
 ## 問題
