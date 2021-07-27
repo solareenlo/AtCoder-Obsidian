@@ -1,38 +1,12 @@
-# J - 転倒数
-[[Fenwick tree]] [[Binary Indexed Tree]] [[ACL]] [[バブルソート]] [[sort]] [[swap]] [[Black]] [[Others]] [[Go]]
-#Fenwick_tree #Binary_Indexed_Tree #ACL #バブルソート #sort #swap #Black #Others #Go 
+# K - 辞書順で何番目？
+[[Binary Indexed Tree]] [[Fenwick tree]] [[ACL]] [[Black]] [[Others]] [[Go]]
+#Binary_Indexed_Tree #Fenwick_tree #ACL #Black #Others #Go 
 
 ## 問題
-- https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_j
+- https://atcoder.jp/contests/chokudai_S001/tasks/chokudai_S001_k
 
 ## 解き方
 ### Code
-```go
-package main
-
-import "fmt"
-
-func main() {
-	var n, m int
-	fmt.Scan(&n)
-
-	a := make([]int, n+1)
-	res := 0
-	for i := 0; i < n; i++ {
-		fmt.Scan(&m)
-		for j := m; j > 0; j -= (j & (-j)) {
-			res -= a[j]
-		}
-		res += i
-		for j := m; j <= n; j += (j & (-j)) {
-			a[j]++
-		}
-	}
-	fmt.Println(res)
-}
-```
-
-### Code Fenwick Tree
 ```go
 package main
 
@@ -42,19 +16,29 @@ import (
 	"os"
 )
 
+const mod = 1000000007
+
 func main() {
 	in := bufio.NewReader(os.Stdin)
 	var n int
 	fmt.Scan(&n)
-	ft := NewInt(n)
-	var a, res int
+
+	a := make([]int, n)
+	fact := make([]int, n+1)
+	fact[0] = 1
+	fw := NewInt(n + 1)
+	res := 0
 	for i := 0; i < n; i++ {
-		fmt.Fscan(in, &a)
-		a--
-		res += ft.Sum(a, n)
-		ft.Add(a, 1)
+		fmt.Fscan(in, &a[i])
+		fact[i+1] = (i + 1) * fact[i] % mod
+		fw.Add(i+1, 1)
 	}
-	fmt.Println(res)
+	for i := 0; i < n; i++ {
+		res += fact[n-1-i] * fw.Sum(0, a[i]) % mod
+		res %= mod
+		fw.Add(a[i], -1)
+	}
+	fmt.Println(res + 1)
 }
 
 // Ref: https://github.com/monkukui/ac-library-go
