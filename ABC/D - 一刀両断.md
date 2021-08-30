@@ -1,6 +1,6 @@
 # D - 一刀両断
-[[面積]] [[符号付き面積]] [[2直線の交点]] [[外積]] [[Light Blue]] [[ABC]]
-#面積 #符号付き面積 #2直線の交点 #外積 #Light_Blue #ABC 
+[[面積]] [[符号付き面積]] [[2直線の交点]] [[外積]] [[Light Blue]] [[ABC]] [[CPP]] [[Go]]
+#面積 #符号付き面積 #2直線の交点 #外積 #Light_Blue #ABC #CPP #Go
 
 ## 問題
 - https://atcoder.jp/contests/abc016/tasks/abc016_4
@@ -16,7 +16,7 @@
 	- $(ad+cf+eb-bc-de-fa)/2$ 
 	- を三角形 $ABC$ の**符号付面積**という．
 	
-### Code1
+### Code CPP01
 ```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
@@ -44,7 +44,7 @@ int main() {
 }
 ```
 
-### Code2
+### Code CPP02
 - または外積を用いた交差判定を行う．
 - http://digilog.usamimi.info/upload/?mode=download&eid=76
 ```c++
@@ -71,5 +71,39 @@ int main() {
 	}
 	cout << cnt/2+1 << '\n';
 	return 0;
+}
+```
+
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var ax, ay, bx, by, n int
+	fmt.Scan(&ax, &ay, &bx, &by, &n)
+
+	x := make([]int, n)
+	y := make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Scan(&x[i], &y[i])
+	}
+
+	cnt := 0
+	for i := 0; i < n; i++ {
+		cx := x[i]
+		cy := y[i]
+		dx := x[(i+1)%n]
+		dy := y[(i+1)%n]
+		area1 := ax*by + bx*cy + cx*ay - ay*bx - by*cx - cy*ax
+		area2 := ax*by + bx*dy + dx*ay - ay*bx - by*dx - dy*ax
+		area3 := cx*dy + dx*ay + ax*cy - cy*dx - dy*ax - ay*cx
+		area4 := cx*dy + dx*by + bx*cy - cy*dx - dy*bx - by*cx
+		if area1*area2 < 0 && area3*area4 < 0 {
+			cnt++
+		}
+	}
+	fmt.Println(cnt/2 + 1)
 }
 ```
