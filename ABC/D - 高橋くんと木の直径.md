@@ -1,6 +1,6 @@
 # D - 高橋くんと木の直径
-[[doble-sweep]] [[ACL]] [[Light Blue]] [[ABC]] [[Go]]
-#double-sweep #ACL #Light_Blue #ABC #Go 
+[[doble-sweep]] [[ACL]] [[Green]] [[ABC]] [[Go]]
+#double-sweep #ACL #Green #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc019/tasks/abc019_4
