@@ -1,6 +1,6 @@
 # C - One-stroke Path
-[[無効グラフ]] [[DFS]] [[Green]] [[ABC]] [[Go]]
-#無効グラフ #DFS #Green #ABC #Go 
+[[無向グラフ]] [[DFS]] [[Green]] [[ABC]] [[Go]]
+#無向グラフ #DFS #Green #ABC #Go 
 
 ## 問題
 ### Code
