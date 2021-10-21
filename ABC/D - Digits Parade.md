@@ -12,6 +12,38 @@ dp[i][j] := \text{先頭}\ i\ \text{文字として考えられるもののう�
 $$
 - このとき $i$ の昇順に $dp$ テーブルを見ると，$i − 1$ 文字目までを $13$ で割ったあまり $(dp[i − 1][j]\ \text{の}\ j)$ と $s[i]$ としてあり得る数字を全て試すことで $dp[i][0] ∼ dp[i][12]$ の値がわかる．
 
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var s string
+	fmt.Scan(&s)
+
+	n := len(s)
+	dp := make([][13]int, n+1)
+	dp[0][0] = 1
+
+	mod := int(1e9 + 7)
+	for i := 0; i < n; i++ {
+		for j := 0; j < 13; j++ {
+			if s[i] == '?' {
+				for k := 0; k < 10; k++ {
+					dp[i+1][(j*10+k)%13] += dp[i][j]
+					dp[i+1][(j*10+k)%13] %= mod
+				}
+			} else {
+				dp[i+1][(j*10+int(s[i]-'0'))%13] += dp[i][j]
+				dp[i+1][(j*10+int(s[i]-'0'))%13] %= mod
+			}
+		}
+	}
+	fmt.Println(dp[n][5])
+}
+```
+
 ### Code1
 ```c++
 #include <iostream>
