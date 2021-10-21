@@ -1,6 +1,6 @@
 # D - Preparing Boxes
-[[数列]] [[パターン]] [[xor]] [[Green]] [[ABC]]
-#数列 #パターン #xor #Green #ABC 
+[[数列]] [[パターン]] [[xor]] [[Green]] [[ABC]] [[Go]]
+#数列 #パターン #xor #Green #ABC #Go
 
 ## 問題
 - https://atcoder.jp/contests/abc134/tasks/abc134_d
@@ -11,6 +11,40 @@
 	- こうすると，整数 $i$ が書かれた箱にボールを入れるかを決めるとき，$i$ 以外の $i$ の倍数が書かれた箱については，すでにボールを入れるかが決まっていることになる．
 - 答えは箱にボールが入っていた場合の，ボールの個数を出力するので，ボールの個数が $0$ の場合は箱の番号を出力しなくて良い．
 - for 文の上手な使い方
+
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Scan(&n)
+
+	a := make([]int, n+1)
+	for i := 1; i < n+1; i++ {
+		fmt.Scan(&a[i])
+	}
+
+	cnt := 0
+	for i := n; i > 0; i-- {
+		for j := i + i; j < n+1; j += i {
+			a[i] ^= a[j]
+		}
+		if a[i] != 0 {
+			cnt++
+		}
+	}
+	fmt.Println(cnt)
+
+	for i := 1; i < n+1; i++ {
+		if a[i] != 0 {
+			fmt.Println(i)
+		}
+	}
+}
+```
 
 ### Code1
 ```c++
