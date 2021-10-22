@@ -1,6 +1,6 @@
 # C - 経路
 [[グリッド]] [[組合せ]] [[MOD]] [[フェルマーの小定理]] [[Green]] [[ABC]] [[Go]]
-#グリッド #組合せ #MOD #フェルマーの定理 #Green #ABC #Go 
+#グリッド #組合せ #MOD #フェルマーの小定理 #Green #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc034/tasks/abc034_c

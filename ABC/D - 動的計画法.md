@@ -1,6 +1,6 @@
 # D - 動的計画法
 [[DP]] [[inv]] [[フェルマーの小定理]] [[組合せ]] [[Blue]] [[ABC]] [[Go]]
-#DP #inv #フェルマーの定理 #組合せ #Blue #ABC #Go 
+#DP #inv #フェルマーの小定理 #組合せ #Blue #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc024/tasks/abc024_d

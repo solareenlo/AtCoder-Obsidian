@@ -1,6 +1,6 @@
 # D - 多重ループ
 [[組合せ]] [[inv]] [[nCr]] [[フェルマーの小定理]] [[Light Blue]] [[ABC]] [[Go]]
-#組分け #inv #nCr #フェルマーの定理 #Light_Blue #ABC #Go 
+#組分け #inv #nCr #フェルマーの小定理 #Light_Blue #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc021/tasks/abc021_d
