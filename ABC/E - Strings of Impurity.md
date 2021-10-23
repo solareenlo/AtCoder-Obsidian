@@ -1,6 +1,6 @@
 # E - Strings of Impurity
-[[文字列操作]] [[Light Blue]] [[ABC]]
-#文字列操作 #Light_Blue #ABC 
+[[文字列操作]] [[文字列]] [[Light Blue]] [[ABC]]
+#文字列操作 #文字列 #Light_Blue #ABC 
 
 ## 問題
 - https://atcoder.jp/contests/abc138/tasks/abc138_e
@@ -13,7 +13,37 @@
 - あとは周期性を利用し，$i = 0, . . . , |s| − 1$ のそれぞれに対して $\text{next}_{ch,i}$ :「s ′ の i 文 字目以降で文字種 ch が最初に現れる位置」を $O((\text{文字種数}) \times |s|)$ 時間かけて事前にすべて求めておくとい う方針や，二分探索を用いて ch の次の出現位置を毎回 $O(\log |s|)$ 時間かけて求めるという方針が考えられま す．
 - いずれにせよ，$s$ を 2 個連結した文字列を用いると実装が楽になります．
 
-## Code
+### Code Go
+```go
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var s, t string
+	fmt.Scan(&s, &t)
+
+	ss := s + s
+	res := -1
+	n := len(t)
+	for i := 0; i < n; i++ {
+		start := (res + 1) % len(s)
+		sub := ss[start:]
+		index := strings.IndexByte(sub, t[i])
+		if index == -1 {
+			fmt.Println(-1)
+			return
+		}
+		res += index + 1
+	}
+	fmt.Println(res + 1)
+}
+```
+
+### Code
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
