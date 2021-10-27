@@ -1,6 +1,6 @@
 # E - Balanced Path
-[[DP]] [[Blue]] [[ABC]] [[Go]]
-#DP #Blue #ABC #Go 
+[[グリッド]] [[DP]] [[Blue]] [[ABC]] [[Go]]
+#グリッド #DP #Blue #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc147/tasks/abc147_e

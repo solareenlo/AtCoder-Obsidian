@@ -1,6 +1,6 @@
 # F - Sum Difference
-[[数列]] [[和集合]] [[Yellow]] [[ABC]] [[Go]]
-#数列 #和集合 #Yellow #ABC #Go 
+[[数学的考察]] [[数列]] [[和集合]] [[Yellow]] [[ABC]] [[Go]]
+#数学的考察 #数列 #和集合 #Yellow #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc147/tasks/abc147_f
