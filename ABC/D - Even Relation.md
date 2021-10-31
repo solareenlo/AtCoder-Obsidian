@@ -1,6 +1,6 @@
 # D - Even Relation
-[[Tree]] [[DFS]] [[BFS]] [[Light Blue]] [[ABC]]
-#Tree #DFS #BFS #Light_Blue #ABC 
+[[Tree]] [[DFS]] [[BFS]] [[Light Blue]] [[ABC]] [[Go]] [[CPP]]
+#Tree #DFS #BFS #Light_Blue #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc126/tasks/abc126_d
@@ -12,8 +12,50 @@
 - この式の第 $3$ 項は偶数なので，$d_u$ と $d_w$ の偶奇が等しいときに限り，$u$ と $w$ の距離は偶数になる．
 - よって例えば $d_i$ が偶数の頂点は白に，奇数の頂点は黒に塗ることで条件を満たす塗り分けが可能となる．
 
-### Code2
-DFS version
+### Code DFS Go
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+type pair struct{ to, color int }
+
+var G [][]pair = make([][]pair, 100001)
+var res [100001]int
+
+func dfs(now, pre, color int) {
+	res[now] = color
+	for _, g := range G[now] {
+		if g.to != pre {
+			dfs(g.to, now, color^(g.color&1))
+		}
+	}
+}
+
+func main() {
+	in := bufio.NewReader(os.Stdin)
+
+	var n int
+	fmt.Fscan(in, &n)
+
+	var u, v, w int
+	for i := 1; i < n; i++ {
+		fmt.Fscan(in, &u, &v, &w)
+		G[u] = append(G[u], pair{v, w})
+		G[v] = append(G[v], pair{u, w})
+	}
+	dfs(1, 0, 0)
+	for i := 1; i < n+1; i++ {
+		fmt.Println(res[i])
+	}
+}
+```
+
+### Code DFS CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -42,8 +84,7 @@ int main() {
 }
 ```
 
-### Code1
-BFS version
+### Code BFS CPP
 ```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
