@@ -1,6 +1,6 @@
 # E - Sequence Decomposing
-[[数学的考察]] [[広義短調減少]] [[upper_bound]] [[lower_bound]] [[Light Blue]] [[ABC]]
-#数学的考察 #広義短調減少 #upper_bound #lower_bound #Light_Blue #ABC 
+[[数学的考察]] [[広義短調減少]] [[upper_bound]] [[lower_bound]] [[Light Blue]] [[ABC]] [[Go]] [[CPP]]
+#数学的考察 #広義短調減少 #upper_bound #lower_bound #Light_Blue #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc134/tasks/abc134_e
@@ -10,7 +10,36 @@
 - ので，与えられた数列から広義短調減少列を作成する問題．
 - 証明: https://img.atcoder.jp/abc134/editorial.pdf
 
-### Code2
+### Code Go
+```go
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	var n int
+	fmt.Scan(&n)
+
+	dp := make([]int, n)
+	for i := range dp {
+		dp[i] = 10
+	}
+
+	for i := 0; i < n; i++ {
+		var a int
+		fmt.Scan(&a)
+		index := sort.SearchInts(dp, -a+1)
+		dp[index] = -a
+	}
+
+	fmt.Println(sort.SearchInts(dp, 1))
+}
+```
+
+### Code2 CPP
 短いバージョン
 ```c++
 #include <bits/stdc++.h>
@@ -27,7 +56,7 @@ int main() {
 }
 ```
 
-### Code1
+### Code1 CPP
 ```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)

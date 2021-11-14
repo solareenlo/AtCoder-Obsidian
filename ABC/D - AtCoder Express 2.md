@@ -1,6 +1,6 @@
 # D - AtCoder Express 2
-[[累積和]] [[2次元累積和]] [[Light Blue]] [[ABC]]
-#累積和 #2次元累積和 #Light_Blue #ABC 
+[[累積和]] [[2次元累積和]] [[Light Blue]] [[ABC]] [[Go]] [[CPP]]
+#累積和 #2次元累積和 #Light_Blue #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc106/tasks/abc106_d
@@ -14,6 +14,36 @@
 - この問題では，$N\leq 500$ と小さいため，累積和を全部記録することができる．
 - $c_{i,\ j} = x_{i,\ 1}\ +\ x_{i,\ 2}\ +\ \cdots + x_{i,\ j}$ とすると，$x_{i,\ l} + x_{i,\ l+1} + \cdots + x_{i,\ r} = c_{i,\ r} - c_{i,\ l-1}$ となるので，各クエリにつき $O(N)$ で解ける．
 - よって，全体的な時間計算量は $O(ON + N^2)$ となる．
+
+### Code Go 累積和
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var n, m, Q, l, r int
+	fmt.Scan(&n, &m, &Q)
+
+	cnt := [502][502]int{}
+	for i := 0; i < m; i++ {
+		fmt.Scan(&l, &r)
+		cnt[l][r]++
+	}
+
+	for i := 0; i < n; i++ {
+		for j := 0; j < n; j++ {
+			cnt[i+1][j+1] += cnt[i+1][j] + cnt[i][j+1] - cnt[i][j]
+		}
+	}
+
+	for i := 0; i < Q; i++ {
+		fmt.Scan(&l, &r)
+		l--
+		fmt.Println(cnt[r][r] + cnt[l][l] - cnt[l][r] - cnt[r][l])
+	}
+}
+```
 
 ### Code1
 ```c++
