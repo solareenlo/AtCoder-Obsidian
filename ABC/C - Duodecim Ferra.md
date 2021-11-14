@@ -1,6 +1,6 @@
 # C - Duodecim Ferra
-[[組合せ]] [[Gray]] [[ABC]]
-#組合せ #Gray #ABC 
+[[組合せ]] [[Gray]] [[ABC]] [[Go]] [[CPP]]
+#組合せ #Gray #ABC #Go #CPP
 
 ## 問題
 - https://atcoder.jp/contests/abc185/tasks/abc185_c
@@ -13,7 +13,26 @@
 - $\dfrac{(L-1)}{1!},\ \dfrac{(L-1)(L-2)}{2!},\ \dfrac{(L-1)(L-2)(L-3)}{3!},\ \dots ,\ \dfrac{(L-1)(L-2)(L-3)\dots(L-11)}{11!}$ の順番に計算していく．
 - これらの数はそれぞれ $_{L-1}C_1,\ _{L-1}C_2,\ _{L-1}C_3,\ \dots,\ _{L-1}C_{11}$ なので，全て整数となる．
 
-### Code1
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var l int
+	fmt.Scan(&l)
+
+	res := 1
+	for i := 1; i < 12; i++ {
+		res *= l - i
+		res /= i
+	}
+	fmt.Println(res)
+}
+```
+
+### Code1 CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -28,7 +47,7 @@ int main() {
 }
 ```
 
-### Code2
+### Code2 CPP
 - dp を使う方法．
 ```c++
 #include <bits/stdc++.h>

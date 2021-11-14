@@ -1,5 +1,5 @@
 # F - Range Xor Query
-[[xor]] [[Segment tree]] [[Fenwick tree]] [[ACL]] [[Green]] [[ABC]]
+[[xor]] [[Segment tree]] [[Fenwick tree]] [[ACL]] [[Green]] [[ABC]] [[Go]] [[CPP]]
 #xor #Segment_tree #Fenwick_tree #ACL #Green #ABC 
 
 ## 問題
@@ -10,7 +10,59 @@
 - 計算量は $O((N + Q)\log (N))$．
 - また，$f(i) = A_1\oplus A_2\oplus A_3\oplus \cdots \oplus A_i(f(0)=0 \text{とする})$ さえ高速に計算できれば，xor の性質により，答えは $f(Y_i)\oplus f(X_i -1)$ となるので，Fenwick tree(Binary indexed tree) を使うこともできる．
 
-### Code1
+### Code Go
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+var (
+	bit  = [300003]int{}
+	n, q int
+)
+
+func add(i, x int) {
+	for i <= n {
+		bit[i] ^= x
+		i += i & -i
+	}
+}
+
+func sum(i int) int {
+	res := 0
+	for i > 0 {
+		res ^= bit[i]
+		i -= i & -i
+	}
+	return res
+}
+
+func main() {
+	in := bufio.NewReader(os.Stdin)
+
+	fmt.Fscan(in, &n, &q)
+	for i := 1; i <= n; i++ {
+		var a int
+		fmt.Fscan(in, &a)
+		add(i, a)
+	}
+	for ; q > 0; q-- {
+		var t, x, y int
+		fmt.Fscan(in, &t, &x, &y)
+		if t == 1 {
+			add(x, y)
+		} else {
+			fmt.Println(sum(y) ^ sum(x-1))
+		}
+	}
+}
+```
+
+### Code1 CPP
 Segment tree version
 ```c++
 #include <bits/stdc++.h>
