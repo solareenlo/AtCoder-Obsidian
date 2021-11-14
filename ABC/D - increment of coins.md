@@ -1,6 +1,6 @@
 # D - increment of coins
-[[DP]] [[確率DP]] [[メモ化再起]] [[Light Blue]] [[ABC]]
-#DP #確率DP #メモ化再起 #Light_Blue #ABC 
+[[DP]] [[確率DP]] [[メモ化再起]] [[Light Blue]] [[ABC]] [[Go]] [[CPP]]
+#DP #確率DP #メモ化再起 #Light_Blue #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc184/tasks/abc184_d
@@ -19,7 +19,33 @@ $$
 となる．（金貨を引く確率$\times$金貨を引いた時の操作回数の期待値$+$銀貨を……）  
 - この式に従って DP を行うと答えを求めることができる．
 
-### Code
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	dp := [101][101][101]float64{}
+	for i := 99; i >= 0; i-- {
+		for j := 99; j >= 0; j-- {
+			for k := 99; k >= 0; k-- {
+				sum := float64(i + j + k)
+				if sum == 0.0 {
+					continue
+				}
+				dp[i][j][k] = float64(i)/sum*dp[i+1][j][k] + float64(j)/sum*dp[i][j+1][k] + float64(k)/sum*dp[i][j][k+1] + 1.0
+			}
+		}
+	}
+
+	var a, b, c int
+	fmt.Scan(&a, &b, &c)
+	fmt.Println(dp[a][b][c])
+}
+```
+
+### Code CPP
 メモ化再起 version
 ```c++
 #include <bits/stdc++.h>
