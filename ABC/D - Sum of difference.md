@@ -1,6 +1,6 @@
 # D - Sum of difference
-[[数列]] [[sort]] [[累積和]] [[Brown]] [[ABC]]
-#数列 #sort #累積和 #Brown #ABC 
+[[数列]] [[sort]] [[累積和]] [[Brown]] [[ABC]] [[Go]] [[CPP]]
+#数列 #sort #累積和 #Brown #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc186/tasks/abc186_d
@@ -11,7 +11,35 @@
 	- それぞれの $i,\ j$ について $|A_i - A_j|$ の和 $= (\text{そこまでの面積} - \text{累積和})$ の合計
 	- となっているので．
 
-### Code
+### Code Go
+```go
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	var n int
+	fmt.Scan(&n)
+
+	a := make([]int, n)
+	for i := range a {
+		fmt.Scan(&a[i])
+	}
+	sort.Ints(a)
+
+	res := 0
+	for i := 0; i < n; i++ {
+		res += (i+1)*a[i] - (n-i)*a[i]
+	}
+
+	fmt.Println(res)
+}
+```
+
+### Code CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
