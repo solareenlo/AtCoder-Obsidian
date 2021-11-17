@@ -1,6 +1,6 @@
 # D - Logical Expression
-[[AND]] [[論理和]] [[OR]] [[論理積]] [[Brown]] [[ABC]]
-#AND #論理和 #OR #論理積 #Brown #ABC 
+[[AND]] [[論理和]] [[OR]] [[論理積]] [[Brown]] [[ABC]] [[Go]] [[CPP]]
+#AND #論理和 #OR #論理積 #Brown #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc189/tasks/abc189_d
@@ -14,7 +14,31 @@
 - よって，この問題は時間計算量 $O(N)$ で解ける．	
 - 以上のことを発見できるかどうかが鍵となる．
 
-### Code
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Scan(&n)
+
+	res, x := 1, 1
+	for i := 0; i < n; i++ {
+		x <<= 1
+		var s string
+		fmt.Scan(&s)
+		if s == "OR" {
+			res += x
+		}
+	}
+
+	fmt.Println(res)
+}
+```
+
+### Code CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
