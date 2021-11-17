@@ -1,6 +1,6 @@
 # D - Staircase Sequences
-[[数学的考察]] [[等差数列]] [[約数]] [[Brown]] [[ABC]]
-#数学的考察 #等差数列 #約数 #Brown #ABC 
+[[数学的考察]] [[等差数列]] [[約数]] [[Brown]] [[ABC]] [[Go]] [[CPP]]
+#数学的考察 #等差数列 #約数 #Brown #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc190/tasks/abc190_d
@@ -13,7 +13,29 @@
 - https://atcoder.jp/contests/abc190/editorial/643
 - https://atcoder.jp/contests/abc190/editorial/628
 
-### Code
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Scan(&n)
+	n *= 2
+
+	cnt := 0
+	for i := 1; i*i < n+1; i++ {
+		if n%i == 0 && (i%2 != 0 || (n/i)%2 != 0) {
+			cnt++
+		}
+	}
+
+	fmt.Println(cnt * 2)
+}
+```
+
+### Code CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
