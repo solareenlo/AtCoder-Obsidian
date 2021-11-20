@@ -1,11 +1,33 @@
 # C - Squared Error
-[[式変形]] [[数学的考察]] [[主客転倒]] [[Gray]] [[ABC]]
-#式変形 #数学的考察 #主客転倒 #Gray #ABC 
+[[式変形]] [[数学的考察]] [[主客転倒]] [[Gray]] [[ABC]] [[Go]] [[CPP]]
+#式変形 #数学的考察 #主客転倒 #Gray #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc194/tasks/abc194_c
 
 ## 解き方
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Scan(&n)
+
+	res, sum := 0, 0
+	for i := 0; i < n; i++ {
+		var a int
+		fmt.Scan(&a)
+		res += a * a
+		sum += a
+	}
+
+	fmt.Println(res*n - sum*sum)
+}
+```
+
 ### Code 主客転倒
 ```c++
 #include <bits/stdc++.h>

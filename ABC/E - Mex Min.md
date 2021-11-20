@@ -1,13 +1,61 @@
 # E - Mex Min
-[[sort]] [[pos]] [[数学的考察]] [[Green]] [[ABC]]
-#sort #pos #数学的考察 #Green #ABC 
+[[sort]] [[pos]] [[数学的考察]] [[Green]] [[ABC]] [[Go]] [[CPP]]
+#sort #pos #数学的考察 #Green #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc194/tasks/abc194_e
 
 ## 解き方
 
-### Code2
+### Code Go
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	in := bufio.NewReader(os.Stdin)
+
+	var n, m int
+	fmt.Fscan(in, &n, &m)
+
+	pos := make([]int, n)
+	for i := 0; i < n; i++ {
+		pos[i] = -1
+	}
+
+	res := n
+	for i := 0; i < n; i++ {
+		var a int
+		fmt.Fscan(in, &a)
+		if i > m+pos[a] {
+			res = min(res, a)
+		}
+		pos[a] = i
+	}
+
+	for i := 0; i < n; i++ {
+		if n > m+pos[i] {
+			res = min(res, i)
+		}
+	}
+
+	fmt.Println(res)
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+```
+
+### Code2 CPP
 ```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
@@ -31,7 +79,7 @@ int main() {
 }
 ```
 
-### Code1
+### Code1 CPP
 ```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
