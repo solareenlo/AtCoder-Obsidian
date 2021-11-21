@@ -1,6 +1,6 @@
 # D - Opposite
-[[Complex]] [[数学的考察]] [[図形]] [[Green]] [[ABC]]
-#Complex #数学的考察 #図形 #Green #ABC 
+[[Complex]] [[数学的考察]] [[図形]] [[Green]] [[ABC]] [[Go]] [[CPP]]
+#Complex #数学的考察 #図形 #Green #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc197/tasks/abc197_d
@@ -10,7 +10,38 @@
 - https://atcoder.jp/contests/abc197/editorial/1030
 - https://blog.hamayanhamayan.com/entry/2021/03/27/224742
 
-### Code 2
+### Code Go
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func rotate(vec complex128, ang float64) complex128 {
+	x := real(vec)
+	y := imag(vec)
+	return complex(x*math.Cos(ang)-y*math.Sin(ang), x*math.Sin(ang)+y*math.Cos(ang))
+}
+
+func main() {
+	var n float64
+	fmt.Scan(&n)
+
+	var x, y float64
+	fmt.Scan(&x, &y)
+	p0 := complex(x, y)
+	fmt.Scan(&x, &y)
+	p1 := complex(x, y)
+
+	center := (p0 + p1) / 2.0
+	res := rotate(p0-center, 2.0*math.Pi/n) + center
+	fmt.Printf("%0.9f %0.9f\n", real(res), imag(res))
+}
+```
+
+### Code 2 CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -28,7 +59,7 @@ int main() {
 }
 ```
 
-### Code 1
+### Code 1 CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;

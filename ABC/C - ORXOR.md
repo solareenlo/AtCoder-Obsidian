@@ -1,12 +1,53 @@
 # C - ORXOR
-[[OR]] [[xor]] [[bit全探索]] [[DFS]] [[Green]] [[ABC]]
-#OR #xor #bit全探索 #DFS #Green #ABC 
+[[OR]] [[xor]] [[bit全探索]] [[DFS]] [[Green]] [[ABC]] [[Go]] [[CPP]]
+#OR #xor #bit全探索 #DFS #Green #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc197/tasks/abc197_c
 
 ## 解き方
-### Code bit 全探索
+### Code DFS Go
+```go
+package main
+
+import "fmt"
+
+var (
+	n   int
+	a       = [30]int{}
+	res int = 1 << 60
+)
+
+func dfs(x, s1, s2 int) {
+	if x == n {
+		res = min(res, s1^s2)
+		return
+	}
+	dfs(x+1, s1|a[x], s2)
+	dfs(x+1, a[x], s1^s2)
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+
+func main() {
+	fmt.Scan(&n)
+
+	for i := 0; i < n; i++ {
+		fmt.Scan(&a[i])
+	}
+
+	dfs(0, 0, 0)
+
+	fmt.Println(res)
+}
+```
+
+### Code bit 全探索 CPP
 ```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i=0; i<(n); i++)
@@ -28,7 +69,7 @@ int main() {
 }
 ```
 
-### Code DFS
+### Code DFS CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
