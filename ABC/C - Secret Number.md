@@ -1,6 +1,6 @@
 # C - Secret Number
-[[全探索]] [[組合せ]] [[Brown]] [[ABC]]
-#全探索 #組合せ #Brown #ABC 
+[[全探索]] [[組合せ]] [[Brown]] [[ABC]] [[Go]] [[CPP]]
+#全探索 #組合せ #Brown #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc201/tasks/abc201_c
@@ -8,7 +8,37 @@
 ## 解き方
 - https://atcoder.jp/contests/abc201/editorial/1825
 
-### Code 全探索
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var s string
+	fmt.Scan(&s)
+	res := 0
+	for i := 0; i < 10000; i++ {
+		a := i % 10
+		b := i / 10 % 10
+		c := i / 100 % 10
+		d := i / 1000 % 10
+		flag := true
+		for j := range s {
+			e := (a == j) || (b == j) || (c == j) || (d == j)
+			if (e && s[j] == 'x') || (!e && s[j] == 'o') {
+				flag = false
+			}
+		}
+		if flag {
+			res++
+		}
+	}
+	fmt.Println(res)
+}
+```
+
+### Code 全探索 CPP
 ```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
@@ -36,7 +66,7 @@ int main() {
 }
 ```
 
-### Code 組合せ
+### Code 組合せ CPP
 ```c++
 #include <bits/stdc++.h>
 #include <atcoder/all>
