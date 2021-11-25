@@ -1,6 +1,6 @@
 # D - aab aba baa
-[[DP]] [[再起関数]] [[Green]] [[ABC]]
-#DP #再起関数 #Green #ABC 
+[[DP]] [[再起関数]] [[Green]] [[ABC]] [[Go]] [[CPP]]
+#DP #再起関数 #Green #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc202/tasks/abc202_d
@@ -8,7 +8,47 @@
 ## 解き方
 - https://atcoder.jp/contests/abc202/editorial/1860
 
-### Code DP
+### Code Go
+```go
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var a, b, k int
+	fmt.Scan(&a, &b, &k)
+
+	var dp [31][31]int
+	dp[0][0] = 1
+	for i := 0; i < a+1; i++ {
+		for j := 0; j < b+1; j++ {
+			if i != 0 {
+				dp[i][j] += dp[i-1][j]
+			}
+			if j != 0 {
+				dp[i][j] += dp[i][j-1]
+			}
+		}
+	}
+	for a > 0 && b > 0 {
+		if k <= dp[a-1][b] {
+			fmt.Print("a")
+			a--
+		} else {
+			fmt.Print("b")
+			k -= dp[a-1][b]
+			b--
+		}
+	}
+	fmt.Print(strings.Repeat("a", a), strings.Repeat("b", b))
+	fmt.Println()
+}
+```
+
+### Code DP CPP
 ```c++
 #include <iostream>
 #include <string>
@@ -39,7 +79,7 @@ int main() {
 }
 ```
 
-### Code DP + 再起
+### Code DP + 再起 CPP
 ```c++
 #include <iostream>
 #define REP(i, n) for (int i = 0; i < (n); i++)
