@@ -1,6 +1,6 @@
 # D - Xor Sum
-[[xor]] [[DP]] [[再起関数]] [[map]] [[Yellow]] [[ABC]] [[Go]]
-#xor #DP #再起関数 #map #Yellow #ABC #Go 
+[[xor]] [[DP]] [[再帰関数]] [[map]] [[Yellow]] [[ABC]] [[Go]]
+#xor #DP #再帰関数 #map #Yellow #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc050/tasks/arc066_b

@@ -1,6 +1,6 @@
 # D - increment of coins
-[[DP]] [[確率DP]] [[メモ化再起]] [[Light Blue]] [[ABC]] [[Go]] [[CPP]]
-#DP #確率DP #メモ化再起 #Light_Blue #ABC #Go #CPP 
+[[DP]] [[確率DP]] [[メモ化再帰]] [[再帰]] [[Light Blue]] [[ABC]] [[Go]] [[CPP]]
+#DP #確率DP #メモ化再帰 #再帰 #Light_Blue #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc184/tasks/abc184_d
@@ -46,7 +46,7 @@ func main() {
 ```
 
 ### Code CPP
-メモ化再起 version
+メモ化再帰 version
 ```c++
 #include <bits/stdc++.h>
 using namespace std;

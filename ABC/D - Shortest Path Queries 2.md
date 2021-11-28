@@ -1,12 +1,12 @@
 # D - Shortest Path Queries 2
-[[ワーシャルフロイド法]] [[Green]] [[ABC]]
-#ワーシャルフロイド法 #Green #ABC 
+[[ワーシャルフロイド法]] [[Green]] [[ABC]] [[Go]]
+#ワーシャルフロイド法 #Green #ABC #Go
 
 ## 問題
 - https://atcoder.jp/contests/abc208/tasks/abc208_d
 
 ## 解き方
-### Code
+### Code Go
 ```go
 package main
 

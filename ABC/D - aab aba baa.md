@@ -1,6 +1,6 @@
 # D - aab aba baa
-[[DP]] [[再起関数]] [[Green]] [[ABC]] [[Go]] [[CPP]]
-#DP #再起関数 #Green #ABC #Go #CPP 
+[[DP]] [[再帰関数]] [[Green]] [[ABC]] [[Go]] [[CPP]]
+#DP #再帰関数 #Green #ABC #Go #CPP 
 
 ## 問題
 - https://atcoder.jp/contests/abc202/tasks/abc202_d
@@ -79,7 +79,7 @@ int main() {
 }
 ```
 
-### Code DP + 再起 CPP
+### Code DP + 再帰 CPP
 ```c++
 #include <iostream>
 #define REP(i, n) for (int i = 0; i < (n); i++)

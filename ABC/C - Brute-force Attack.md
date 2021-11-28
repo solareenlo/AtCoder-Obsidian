@@ -1,6 +1,6 @@
 # C - Brute-force Attack
-[[文字列操作]] [[再起関数]] [[Gray]] [[ABC]] [[Go]]
-#文字列操作 #再起関数 #Gray #ABC #Go 
+[[文字列操作]] [[再帰関数]] [[Gray]] [[ABC]] [[Go]]
+#文字列操作 #再帰関数 #Gray #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc029/tasks/abc029_c

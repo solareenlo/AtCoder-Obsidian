@@ -1,12 +1,12 @@
 # A - Wikipedia
-[[再起関数]] [[アッカーマン関数]] [[Black]] [[Others]]
-#再起関数 #アッカーマン関数 #Black #Others 
+[[再帰関数]] [[アッカーマン関数]] [[Black]] [[Others]]
+#再帰関数 #アッカーマン関数 #Black #Others 
 
 ## 問題
 - https://atcoder.jp/contests/kupc2012pr/tasks/kupc2012pr_1
 
 ## 解き方
-- [アッカーマン関数](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%83%E3%82%AB%E3%83%BC%E3%83%9E%E3%83%B3%E9%96%A2%E6%95%B0)を再起か，パターンを使って解く．
+- [アッカーマン関数](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%83%E3%82%AB%E3%83%BC%E3%83%9E%E3%83%B3%E9%96%A2%E6%95%B0)を再帰か，パターンを使って解く．
 
 ### Code1
 ```c++

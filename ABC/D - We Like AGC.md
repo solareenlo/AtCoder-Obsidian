@@ -1,6 +1,6 @@
 # D - We Like AGC
-[[DP]] [[DFS]] [[メモ化再起]] [[Light Blue]] [[ABC]] [[Go]]
-#DP #DFS #メモ化再起 #Light_Blue #ABC #Go 
+[[DP]] [[DFS]] [[メモ化再帰]] [[再帰]] [[Light Blue]] [[ABC]] [[Go]]
+#DP #DFS #メモ化再帰 #再帰 #Light_Blue #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc122/tasks/abc122_d
@@ -57,7 +57,7 @@ func main() {
 }
 ```
 
-### Code メモ化再起
+### Code メモ化再帰
 ```go
 package main
 

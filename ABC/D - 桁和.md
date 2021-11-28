@@ -1,6 +1,6 @@
 # D - 桁和
-[[桁]] [[全探索]] [[探索]] [[再起関数]] [[Blue]] [[ABC]] [[Go]]
-#桁 #全探索 #探索 #再起関数 #Blue #ABC #Go 
+[[桁]] [[全探索]] [[探索]] [[再帰関数]] [[Blue]] [[ABC]] [[Go]]
+#桁 #全探索 #探索 #再帰関数 #Blue #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc044/tasks/arc060_b

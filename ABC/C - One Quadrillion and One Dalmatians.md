@@ -1,6 +1,6 @@
 # C - One Quadrillion and One Dalmatians
-[[再起関数]] [[Reverse]] [[Brown]] [[ABC]] [[Go]]
-#再起関数 #Reverse #Brown #ABC #Go 
+[[再帰関数]] [[Reverse]] [[Brown]] [[ABC]] [[Go]]
+#再帰関数 #Reverse #Brown #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc171/tasks/abc171_c
