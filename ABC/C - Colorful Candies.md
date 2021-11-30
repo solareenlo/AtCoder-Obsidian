@@ -1,6 +1,6 @@
 # C - Colorful Candies
-[[map]] [[Gray]] [[ABC]]
-#map #Gray #ABC 
+[[map]] [[Gray]] [[ABC]] [[Go]]
+#map #Gray #ABC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/abc210/tasks/abc210_c
