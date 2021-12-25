@@ -1,6 +1,6 @@
 # E - + Graph
-[[Graph]] [[DFS]] [[二分探索]] [[Yellow]] [[ABC]] [[Go]]
-#Graph #DFS #二分探索 #Yellow #ABC #Go 
+[[Graph]] [[DFS]] [[二分探索]] [[Yellow]] [[ABC-Like]] [[Go]]
+#Graph #DFS #二分探索 #Yellow #ABC-Like #Go 
 
 ## 問題
 - https://atcoder.jp/contests/soundhound2018-summer-qual/tasks/soundhound2018_summer_qual_e
