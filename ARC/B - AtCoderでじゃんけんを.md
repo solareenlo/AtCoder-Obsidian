@@ -1,6 +1,6 @@
 # B - AtCoderでじゃんけんを
-[[累積和]] [[じゃんけん]] [[Light Blue]] [[ARC]]
-#累積和 #じゃんけん #Light_Blue #ARC 
+[[累積和]] [[じゃんけん]] [[Light Blue]] [[ARC]] [[CPP]] [[Go]]
+#累積和 #じゃんけん #Light_Blue #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc048/tasks/arc048_b
@@ -19,7 +19,47 @@
 - 上記を上手に配列に格納し，計算していく．
 - $K$ を求める時には，累積和を用いることができる．
 
-### Code
+### Code Go
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	in := bufio.NewReader(os.Stdin)
+
+	var n int
+	fmt.Fscan(in, &n)
+
+	r := make([]int, n)
+	h := make([]int, n)
+	s := make([]int, 100002)
+	cnt := [100002][3]int{}
+	for i := 0; i < n; i++ {
+		fmt.Fscan(in, &r[i], &h[i])
+		h[i]--
+		s[r[i]]++
+		cnt[r[i]][h[i]]++
+	}
+
+	for i := 0; i < 100001; i++ {
+		s[i+1] += s[i]
+	}
+
+	for i := 0; i < n; i++ {
+		win := s[r[i]-1] + cnt[r[i]][(h[i]+1)%3]
+		even := cnt[r[i]][h[i]] - 1
+		lose := n - 1 - win - even
+		fmt.Println(win, lose, even)
+	}
+}
+```
+
+### Code CPP
 ```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)

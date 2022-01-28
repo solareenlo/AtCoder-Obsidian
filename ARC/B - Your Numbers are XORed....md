@@ -1,6 +1,6 @@
 # B - Your Numbers are XORed...
-[[数学的考察]] [[xor]] [[Light Blue]] [[ARC]]
-#数学的考察 #xor #Light_Blue #ARC 
+[[数学的考察]] [[xor]] [[Light Blue]] [[ARC]] [[CPP]] [[Go]]
+#数学的考察 #xor #Light_Blue #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc021/tasks/arc021_2
@@ -19,7 +19,38 @@
 - よって，$B_N = B_1 \oplus B_2 \oplus \dots \oplus B_{N-1}$ が成立しないなら，解なし．
 - 矛盾しないなら，答えは辞書順で最小なものなので，$A_1 = 0$ と置いて順に解を計算する． 
 
-### Code
+
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Scan(&n)
+
+	b := make([]int, n)
+	x := 0
+	for i := range b {
+		fmt.Scan(&b[i])
+		x ^= b[i]
+	}
+
+	if x != 0 {
+		fmt.Println(-1)
+		return
+	}
+
+	res := 0
+	for i := 0; i < n; i++ {
+		fmt.Println(res)
+		res ^= b[i]
+	}
+}
+```
+
+### Code CPP
 ```c++
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
