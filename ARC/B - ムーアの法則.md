@@ -1,6 +1,6 @@
 # B - ムーアの法則
-[[三分探索]] [[Light Blue]] [[ARC]]
-#三分探索 #Light_Blue #ARC 
+[[三分探索]] [[Light Blue]] [[ARC]] [[CPP]] [[Go]]
+#三分探索 #Light_Blue #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc054/tasks/arc054_b
@@ -35,7 +35,29 @@ int main() {
 - $f′(x)$ の零点を求め，そのときの値も答えとなる．
 - その場合，零点が $0$ 未満のときは $f (0) = P$ を出力する必要がある．
 
-### Code
+### Code Go
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	var p float64
+	fmt.Scan(&p)
+
+	a := 1.5 / math.Log(2)
+	if p < a {
+		fmt.Println(p)
+	} else {
+		fmt.Println(-1.5*(math.Log2(a)-math.Log2(p)) + a)
+	}
+}
+```
+
+### Code CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
