@@ -1,6 +1,6 @@
 # C - Solutions
-[[貪欲法]] [[区間スケジューリング]] [[Green]] [[ARC]]
-#貪欲法 #区間スケジューリング #Green #ARC
+[[貪欲法]] [[区間スケジューリング]] [[Green]] [[ARC]] [[CPP]] [[Go]]
+#貪欲法 #区間スケジューリング #Green #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc106/tasks/arc106_c
@@ -25,7 +25,43 @@
 - 1 つ大きな区間を取り，その中に $M + 1$ 個の区間を，それら同士が互いに交わらないように配置します．
 - 残りの $N − M − 2$ 個の区間を他の区間と交わらないように配置すれば，条件を満たします．
 
-## Code
+### Code Go
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	in := bufio.NewReader(os.Stdin)
+	out := bufio.NewWriter(os.Stdout)
+	defer out.Flush()
+
+	var n, m int
+	fmt.Fscan(in, &n, &m)
+
+	if m < 0 || m > max(0, n-2) {
+		fmt.Fprintln(out, -1)
+	} else {
+		fmt.Fprintln(out, 1, 3+4*m)
+		for i := 0; i < n-1; i++ {
+			fmt.Fprintln(out, 2+i*4, (i+1)*4)
+		}
+	}
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+```
+
+### Code CPP
 ```c
 #include <bits/stdc++.h>
 using namespace std;
