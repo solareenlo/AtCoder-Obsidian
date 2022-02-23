@@ -1,6 +1,6 @@
 # B - log
-[[二分探索]] [[Brown]] [[ARC]]
-#二分探索 #Brown #ARC 
+[[二分探索]] [[Brown]] [[ARC]] [[CPP]] [[Go]]
+#二分探索 #Brown #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc109/tasks/arc109_b
@@ -10,7 +10,31 @@
 - この「作れるだけ作った」ときにいくつの丸太が作れるかを求めるためには，$1 + ⋯ + k \leq n + 1$ を満たす最大の整数 $k$ を求めれば良いです．
 - これは，$1 + ⋯ + k = k ( 1 + k ) / 2$ であることを使って，二分探索をすることで求めることが可能です．
 
-## Code
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Scan(&n)
+
+	l := 0
+	r := 2_000_000_000
+	for r-l > 1 {
+		m := (l + r) / 2
+		if m*(m+1) <= (n+1)*2 {
+			l = m
+		} else {
+			r = m
+		}
+	}
+	fmt.Println(n - l + 1)
+}
+```
+
+### Code CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
