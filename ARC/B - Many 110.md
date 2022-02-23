@@ -1,6 +1,6 @@
 # B - Many 110
-[[文字列操作]] [[周期性]] [[Brown]] [[ARC]]
-#文字列操作 #周期性 #Brown #ARC 
+[[文字列操作]] [[周期性]] [[Brown]] [[ARC]] [[CPP]] [[Go]]
+#文字列操作 #周期性 #Brown #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc110/tasks/arc110_b
@@ -18,7 +18,35 @@ $T$ が含む $K$ 個の $0$ を，$S$ が含む $10^{10}$ 個の $0$ のどの�
 すると，$T$ の末尾が $0$ の場合，答えは $10^{10} − K + 1$．
 $T$ の末尾が $1$ の場合，答えは $10^{10} − K$．
 
-## Code
+### Code Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	var t string
+	fmt.Scan(&n, &t)
+
+	s := "110"
+	res := 0
+	for i := 0; i < 3; i++ {
+		ok := true
+		for j := 0; j < n; j++ {
+			if t[j] != s[(j+i)%3] {
+				ok = false
+			}
+		}
+		if ok {
+			res += (int(3e10)-n-i)/3 + 1
+		}
+	}
+	fmt.Println(res)
+}
+```
+
+### Code CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
