@@ -1,6 +1,6 @@
 # C - String Invasion
-[[パターン]] [[文字列操作]] [[Green]] [[ARC]]
-#パターン #文字列操作 #Green #ARC 
+[[パターン]] [[文字列操作]] [[Green]] [[ARC]] [[CPP]] [[Go]]
+#パターン #文字列操作 #Green #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc113/tasks/arc113_c
@@ -8,7 +8,43 @@
 ## 解き方
 - 後ろから考えていく．
 
-### Code2
+### Code Go
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	in := bufio.NewReader(os.Stdin)
+
+	var s string
+	fmt.Fscan(in, &s)
+
+	n := len(s)
+	s += " "
+	cnt := [128]int{}
+	res := 0
+	for i := n; i > 0; i-- {
+		if s[i-1] == s[i] {
+			for c := 'a'; c <= 'z'; c++ {
+				if s[i] != byte(c) {
+					res += cnt[c]
+					cnt[s[i]] += cnt[c]
+					cnt[c] = 0
+				}
+			}
+		}
+		cnt[s[i]]++
+	}
+	fmt.Println(res)
+}
+```
+
+### Code2 CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -32,7 +68,7 @@ int main() {
 }
 ```
 
-### Code1
+### Code1 CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
