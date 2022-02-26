@@ -1,12 +1,40 @@
 # C - ℕ Coloring
-[[素因数]] [[builtin]] [[Brown]] [[ARC]]
-#素因数 #builtin #Brown #ARC 
+[[素因数]] [[builtin]] [[Brown]] [[ARC]] [[CPP]] [[Go]]
+#素因数 #builtin #Brown #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc115/tasks/arc115_c
 
 ## 解き方
-### Code 素因数の個数
+### Code 素因数の個数 Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Scan(&n)
+
+	for i := 1; i <= n; i++ {
+		cnt := 1
+		a := i
+		for j := 2; j*j <= i; j++ {
+			for a%j == 0 {
+				a /= j
+				cnt++
+			}
+		}
+		if a > 1 {
+			cnt++
+		}
+		fmt.Print(cnt, " ")
+	}
+	fmt.Println()
+}
+```
+
+### Code 素因数の個数 CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -26,7 +54,7 @@ int main() {
 }
 ```
 
-### Code log2
+### Code log2 CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -39,7 +67,7 @@ int main() {
 }
 ```
 
-### Code __builtin_clz
+### Code __builtin_clz CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
