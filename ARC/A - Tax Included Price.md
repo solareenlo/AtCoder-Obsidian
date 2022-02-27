@@ -1,6 +1,6 @@
 # A - Tax Included Price
-[[二分探索]] [[パターン]] [[Brown]] [[ARC]]
-#二分探索 #パターン #Brown #ARC 
+[[二分探索]] [[パターン]] [[Brown]] [[ARC]] [[CPP]] [[Go]]
+#二分探索 #パターン #Brown #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc118/tasks/arc118_a
@@ -8,7 +8,37 @@
 ## 解き方
 - パターンを見つけるか，二分探索を用いる．
 
-### Code パターン
+### Code Go
+```go
+package main
+
+import "fmt"
+
+var t int
+
+func f(x int) int {
+	return (100 + t) * x / 100
+}
+
+func main() {
+	var n int
+	fmt.Scan(&t, &n)
+
+	ok := 0
+	ng := 100 * n
+	for ok+1 < ng {
+		x := (ok + ng) / 2
+		if f(x)-x < n {
+			ok = x
+		} else {
+			ng = x
+		}
+	}
+	fmt.Println(f(ok) + 1)
+}
+```
+
+### Code パターン CPP
 ```c++
 #include <bits/stdc++.h>
 
@@ -19,7 +49,7 @@ int main() {
 }
 ```
 
-### Code 二分探索
+### Code 二分探索 CPP
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
