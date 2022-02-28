@@ -1,6 +1,6 @@
 # B - Uniformly Distributed
-[[グリッド]] [[MOD]] [[Green]] [[ARC]]
-#グリッド #MOD #Green #ARC 
+[[グリッド]] [[MOD]] [[Green]] [[ARC]] [[CPP]] [[Go]]
+#グリッド #MOD #Green #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc120/tasks/arc120_b
@@ -8,7 +8,46 @@
 ## 解き方
 - https://atcoder.jp/contests/arc120/editorial/1923
 
-### Code
+### Code Go
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	in := bufio.NewReader(os.Stdin)
+
+	var n, m int
+	fmt.Fscan(in, &n, &m)
+
+	r := make([]int, 1010)
+	b := make([]int, 1010)
+	for i := 0; i < n; i++ {
+		var s string
+		fmt.Fscan(in, &s)
+		for j := 0; j < m; j++ {
+			if s[j] == 'R' {
+				r[i+j] = 1
+			}
+			if s[j] == 'B' {
+				b[i+j] = 1
+			}
+		}
+	}
+
+	res := 1
+	for i := 0; i < n+m-1; i++ {
+		res = res * (2 - r[i] - b[i]) % 998244353
+	}
+	fmt.Println(res)
+}
+```
+
+### Code CPP
 ```c++
 #include <iostream>
 #define REP(i, n) for (int i = 0; i < (n); i++)
