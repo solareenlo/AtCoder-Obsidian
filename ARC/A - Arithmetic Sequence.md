@@ -1,6 +1,6 @@
 # A - Arithmetic Sequence
-[[等差数列]] [[次元削除]] [[Gray]] [[ARC]]
-#等差数列 #次元削除 #Gray #ARC 
+[[等差数列]] [[次元削除]] [[Gray]] [[ARC]] [[Go]]
+#等差数列 #次元削除 #Gray #ARC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc123/tasks/arc123_a
