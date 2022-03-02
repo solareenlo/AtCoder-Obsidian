@@ -1,12 +1,52 @@
 # B - Insurance
-[[数学的考察]] [[sort]] [[min-max]] [[Brown]] [[ARC]]
-#数学的考察 #sort #min-max #Brown #ARC 
+[[数学的考察]] [[sort]] [[min-max]] [[Brown]] [[ARC]] [[CPP]] [[Go]]
+#数学的考察 #sort #min-max #Brown #ARC #CPP #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc122/tasks/arc122_b
 
 ## 解き方
-### Code min1
+
+### Code Go
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"sort"
+)
+
+func main() {
+	in := bufio.NewReader(os.Stdin)
+
+	var n int
+	fmt.Fscan(in, &n)
+
+	a := make([]int, n)
+	for i := range a {
+		fmt.Fscan(in, &a[i])
+	}
+	sort.Ints(a)
+
+	num := a[n/2]
+	res := 0
+	for i := 0; i < n; i++ {
+		res += a[i] - min(a[i], num)
+	}
+	fmt.Println(float64(res)/float64(n) + float64(num)/2.0)
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+```
+
+### Code min1 CPP
 ```c++
 #include <algorithm>
 #include <iostream>
@@ -28,7 +68,7 @@ int main() {
 }
 ```
 
-### Code min2
+### Code min2 CPP
 ```c++
 #include <iostream>
 #include <iomanip>
