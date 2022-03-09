@@ -1,6 +1,6 @@
 # F - Flip Cells
-[[グリッド]] [[指数型母関数]] [[Red]] [[ARC]] [[Go]]
-#グリッド #指数型母関数 #Red #ARC #Go 
+[[グリッド]] [[指数型母関数]] [[DP]] [[Red]] [[ARC]] [[Go]]
+#グリッド #指数型母関数 #DP #Red #ARC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/arc136/tasks/arc136_f
