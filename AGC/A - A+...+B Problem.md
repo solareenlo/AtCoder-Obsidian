@@ -1,6 +1,6 @@
 # A - A+...+B Problem
-[[min-max]] [[Brown]] [[AGC]] [[Go]]
-#min-max #Brown #AGC #Go 
+[[総和]] [[min-max]] [[Brown]] [[AGC]] [[Go]]
+#総和 #min-max #Brown #AGC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/agc015/tasks/agc015_a
