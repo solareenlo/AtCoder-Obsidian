@@ -1,6 +1,6 @@
 # D - Isomorphism Freak
-[[DFS]] [[Red]] [[AGC]] [[Go]]
-#DFS #Red #AGC #Go 
+[[DFS]] [[Yellow]] [[AGC]] [[Go]]
+#DFS #Yellow #AGC #Go 
 
 ## 問題
 - https://atcoder.jp/contests/agc024/tasks/agc024_d
